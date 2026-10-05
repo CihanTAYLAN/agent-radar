@@ -1,0 +1,24 @@
+{
+  "name": "agent-radar",
+  "version": "0.1.0",
+  "description": "Local, read-only dashboard for AI coding agents on this machine. Monitors Claude Code and other agents (Codex, Gemini CLI, opencode, …) — currently Claude Code.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^5.0.2"
+  }
+}

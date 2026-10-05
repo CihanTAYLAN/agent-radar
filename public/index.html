@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>agent-radar</title>
+  <script src="/theme-init.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#" title="Şu an (ana sayfa)">
+      <svg class="logo" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="9" opacity=".35"/><circle cx="12" cy="12" r="5" opacity=".6"/><path d="M12 12l6.4-6.4"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/>
+      </svg>
+      <span>agent-radar</span>
+    </a>
+    <span class="summary num" id="summary" aria-live="polite"></span>
+    <div class="grow"></div>
+    <button class="search-btn" id="pal-btn" aria-label="Ara veya komut çalıştır">
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"/><path d="M21 21l-4.3-4.3"/></svg>
+      <span>Ara</span><kbd>⌘K</kbd>
+    </button>
+    <span class="conn wait" id="conn" role="status"></span>
+    <div class="menu-wrap">
+      <button class="icon-btn" id="menu-btn" aria-haspopup="true" aria-expanded="false" aria-controls="menu" title="Ayarlar">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h10"/><path d="M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h4"/><path d="M12 17h8"/><circle cx="10" cy="17" r="2"/></svg>
+      </button>
+      <div class="menu" id="menu" role="dialog" aria-label="Ayarlar" hidden></div>
+    </div>
+  </header>
+  <div class="conn-banner" id="conn-banner" role="alert" hidden></div>
+  <div class="app">
+    <nav class="rail" id="rail" aria-label="Oturumlar"></nav>
+    <main class="main">
+      <section class="home" id="home" aria-label="Konular ve şu an">
+        <div id="home-topics"></div>
+        <div id="home-now"></div>
+      </section>
+      <section class="home" id="topic" aria-label="Konu" hidden></section>
+      <section class="session" id="session" aria-label="Oturum" hidden>
+        <header class="sh" id="sess-head"></header>
+        <div class="sbody">
+          <div class="tl" id="timeline"></div>
+          <div class="cost" id="cost" hidden></div>
+          <aside class="detail" id="detail" aria-label="Ajan ayrıntısı" hidden></aside>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="help" id="help" hidden></div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

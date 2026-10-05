@@ -1,0 +1,7 @@
+# The masking engine is tested with synthetic secret-shaped strings. They are fake by design.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Synthetic fixtures for the secret-masking tests"
+paths = ['''(^|/)tests/''']

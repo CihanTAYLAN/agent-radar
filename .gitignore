@@ -1,0 +1,14 @@
+node_modules
+dist
+.claude
+.linux-test-exit
+*.log
+npm-debug.log*
+.env
+.env.*
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea
+.vscode
+*.swp
